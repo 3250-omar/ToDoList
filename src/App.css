@@ -1,38 +1,86 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+   box-sizing: border-box;
+}
+body{
+ display: flex;
+ justify-content: center;
+ margin-top: 1.5rem;
+ background: #333;
+ color: hsl(200, 100%, 90%);
+}
+.App h1{
   text-align: center;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  font-style: italic;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.missions{
+  padding-top: 1rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App form input{
+  margin-top: 1.5rem;
+  width:300px;
+  padding: 10px;
+  text-align: center;
+  margin-right: 1rem;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid hsl(200, 100%, 40%);
+  background: hsl(200, 100%, 30%);
+  border-radius: 0.25em;
+  color: hsl(200, 100%, 90%);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App form input:focus{
+  border: 1px solid hsl(200, 100%, 70%);
+}
+.App form button {
+  background: hsl(200, 100%, 50%, 0.1);
+  border: 1px solid hsl(200, 100%, 50%);
+  color: hsl(200, 100%, 50%);
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  outline: none;
+} 
+.App form button:hover{
+  background-color: hsl(200, 100%, 50%, 0.2);
+  transform: scale(1.2);
+}
+ ul {
+  list-style: none;
+  margin-left: 1rem;
+}
+ul li {
   display: flex;
-  flex-direction: column;
+  gap: 0.5rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li:has(input:checked) label {
+  text-decoration: line-through;
+}
+ul li:has(input:checked) label:hover::before {
+  background: hsl(200, 100%, 30%);
+}
+ul label{
+  display: flex;
+  gap: 0.25rem;
+  cursor: pointer;
+  align-items: center;
+}
+li:has(input:checked) label {
+  text-decoration: line-through;
+}
+ul li button{
+  background: hsl(0, 100%, 40%, 0.1);
+  border: 1px solid hsl(0, 100%, 40%);
+  color: hsl(0, 100%, 40%);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}
+ul li button {
+  background: hsl(0, 100%, 40%, 0.2);
 }
